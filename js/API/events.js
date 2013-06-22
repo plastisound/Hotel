@@ -11,7 +11,9 @@ $(document).ready(function (e) {
 				var tel = $('#regTel').val();
 				var mail = $('#regMail').val();
 				var foto = $('#regFoto').attr('rel');
-				navigator.notification.alert(nom +'\n'+ tel +'\n'+ mail, null, "Hotel", "Aceptar" );
+				enviarDatos(nom, tel, mail, foto)
+				/*navigator.notification.alert(nom +'\n'+ tel +'\n'+ mail, null, "Hotel", "Aceptar" );*/
+				
 			}else{
 				navigator.notification.alert('Todos los campos son requeridos', null, "Hotel", "OK");
 			}

@@ -9,5 +9,5 @@ function tomarFoto(){
 	}, function(err){
 		navigator.notification.alert("Error: "+err.code, null, "Captura", "Aceptar");
 		
-	}, { limit:2});
+	}, { limit:1});
 }
