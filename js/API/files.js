@@ -15,7 +15,7 @@ function subirFoto(foto,nom){
 						navigator.notification.bepp(3);
 						break;
 					case 3:
-						navigator.notification.alert(infoDisp()['nombre'],null,"Info","Si");
+						navigator.notification.alert(infoDisp()['modelo'],null,"Info","Si");
 				}
 				registro(nom);
 				window.location.href="#page";
