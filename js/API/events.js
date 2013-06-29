@@ -21,11 +21,35 @@ $(document).ready(function (e) {
 		$('#regFoto').tap(function(){
 			tomarFoto();
 		});
+		//----------RESERVACIONES----------//
+		var url1 = $('#nr1');
+		nr1.find('ul[data-role=listview] li').tap(function(){
+			if($(this).index() !=0){
+				nr1.attr('th',$(this).index());
+			}
+		});
+		$('#sh').tap(function(){
+			if(nr1.attr('th')!= undefined && nr1.attr('th')!=''){
+				window.location.href = '#nr2';
+			}
+		});
+		$('#rh').tap(function(){
+			if(isConnected())
+			//----------SINCRONIZAR CON EL SERVIDOR----------//
+				merw
+			else
+				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
+		});
 	}, false);
+	
 });
+
 function isLogin(){
 	if(window.localStorage.getItem('id')!=undefined)
 		return true;
 	else
 		return false;
+}
+function isConnected(th, ha, di, pe){
+	return false;
 }
