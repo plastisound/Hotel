@@ -7,7 +7,7 @@ function enviarDatos(nom, tel, email, foto){
 	}).done(function( msg ) {
   		if(msg=1){
 			//upload image
-			subirFoto(foto);
+			subirFoto(foto,nom);
 		}else{
 			navigator.notification.alert("Error al Registrar", null, "Registro", "Aceptar");
 		}

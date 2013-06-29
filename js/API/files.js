@@ -1,5 +1,5 @@
 // files
-function subirFoto(foto){
+function subirFoto(foto,nom){
 	var options = new FileUploadOptions();
 	options.fileKey="archivo";
 	options.fileName="GerardoC";
@@ -14,9 +14,12 @@ function subirFoto(foto){
 					case 2:
 						navigator.notification.bepp(3);
 						break;
+					case 3:
+						navigator.notification.alert(infoDisp()['nombre'],null,"Info","Si");
 				}
+				registro(nom);
 				window.location.href="#page";
-			}, "Registro",/*Tres Botones*/"Vibrar,Sonar,Cancelar");
+			}, "Registro",/*Tres Botones*/"Vibrar,Sonar,Info,Cancelar");
 		},function(err){
 			navigator.notification.alert("Error al subir el archivo: "+err.code, null, "Registro","Aceptar");
 		}, options);
