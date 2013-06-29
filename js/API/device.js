@@ -4,7 +4,7 @@ function infoDisp(){
 	//Array // Declaración de Arreglo
 	/*var arr = new Array();*/ // Forma técnica
 	var arr = [];
-	arr['nombre'] = device.name;
+	arr['nombre'] = device.model;
 	arr['phonegap'] = device.cordova;
 	arr['plataforma'] = device.platform;
 	arr['id'] = device.uuid;
