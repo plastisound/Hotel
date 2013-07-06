@@ -36,7 +36,7 @@ $(document).ready(function (e) {
 		$('#rh').tap(function(){
 			if(isConnected())
 			//----------SINCRONIZAR CON EL SERVIDOR----------//
-				merw
+				subirReserva(0,nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
 			else
 				guardarReserva(nr1.attr('th'), $('#rHabitaciones').val(), $('#rDias').val(), $('#rPersonas').val());
 		});
@@ -49,7 +49,4 @@ function isLogin(){
 		return true;
 	else
 		return false;
-}
-function isConnected(th, ha, di, pe){
-	return false;
 }

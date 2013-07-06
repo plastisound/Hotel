@@ -1,4 +1,7 @@
 // Connection  
 function isConnected(){
-	return false;
+	if(navigator.connection.type!=Connection.NONE)
+		return true;
+	else
+		return false;
 }
